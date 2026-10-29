@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ojdsn-drift-detection"
+version = "0.1.0"
+description = "FRR live-state collection and graph-based configuration drift prototype"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "networkx>=3.3,<4",
+  "PyYAML>=6.0.2,<7",
+]
+
+[project.scripts]
+drift-detection = "drift_detection.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

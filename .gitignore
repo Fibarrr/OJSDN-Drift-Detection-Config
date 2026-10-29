@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+artifacts/
+topology/clab-drift-detection/.state.clab.yaml
+topology/clab-drift-detection/.tls/
+topology/clab-drift-detection/authorized_keys
+topology/clab-drift-detection/ansible-inventory.yml
+topology/clab-drift-detection/nornir-simple-inventory.yml
+topology/clab-drift-detection/topology-data.json

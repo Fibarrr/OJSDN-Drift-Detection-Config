@@ -1,0 +1,60 @@
+schema_version: 1
+management_interface: eth0
+ospf:
+  area: 0.0.0.0
+  passive_interfaces: [lo]
+routers:
+  r1:
+    router_id: 10.255.0.1
+    interfaces:
+      lo: {addresses: [10.255.0.1/32], admin_up: true, mtu: 65536}
+      eth1: {addresses: [10.0.12.1/30], admin_up: true, mtu: 9500}
+      eth2: {addresses: [10.0.61.2/30], admin_up: true, mtu: 9500}
+    static_routes: []
+    ospf:
+      networks: [10.0.12.0/30, 10.0.61.0/30, 10.255.0.1/32]
+  r2:
+    router_id: 10.255.0.2
+    interfaces:
+      lo: {addresses: [10.255.0.2/32], admin_up: true, mtu: 65536}
+      eth1: {addresses: [10.0.12.2/30], admin_up: true, mtu: 9500}
+      eth2: {addresses: [10.0.23.1/30], admin_up: true, mtu: 9500}
+    static_routes: []
+    ospf:
+      networks: [10.0.12.0/30, 10.0.23.0/30, 10.255.0.2/32]
+  r3:
+    router_id: 10.255.0.3
+    interfaces:
+      lo: {addresses: [10.255.0.3/32], admin_up: true, mtu: 65536}
+      eth1: {addresses: [10.0.23.2/30], admin_up: true, mtu: 9500}
+      eth2: {addresses: [10.0.34.1/30], admin_up: true, mtu: 9500}
+    static_routes: []
+    ospf:
+      networks: [10.0.23.0/30, 10.0.34.0/30, 10.255.0.3/32]
+  r4:
+    router_id: 10.255.0.4
+    interfaces:
+      lo: {addresses: [10.255.0.4/32], admin_up: true, mtu: 65536}
+      eth1: {addresses: [10.0.34.2/30], admin_up: true, mtu: 9500}
+      eth2: {addresses: [10.0.45.1/30], admin_up: true, mtu: 9500}
+    static_routes: []
+    ospf:
+      networks: [10.0.34.0/30, 10.0.45.0/30, 10.255.0.4/32]
+  r5:
+    router_id: 10.255.0.5
+    interfaces:
+      lo: {addresses: [10.255.0.5/32], admin_up: true, mtu: 65536}
+      eth1: {addresses: [10.0.45.2/30], admin_up: true, mtu: 9500}
+      eth2: {addresses: [10.0.56.1/30], admin_up: true, mtu: 9500}
+    static_routes: []
+    ospf:
+      networks: [10.0.45.0/30, 10.0.56.0/30, 10.255.0.5/32]
+  r6:
+    router_id: 10.255.0.6
+    interfaces:
+      lo: {addresses: [10.255.0.6/32], admin_up: true, mtu: 65536}
+      eth1: {addresses: [10.0.56.2/30], admin_up: true, mtu: 9500}
+      eth2: {addresses: [10.0.61.1/30], admin_up: true, mtu: 9500}
+    static_routes: []
+    ospf:
+      networks: [10.0.56.0/30, 10.0.61.0/30, 10.255.0.6/32]
